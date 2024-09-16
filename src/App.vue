@@ -5,9 +5,9 @@ import { ref } from 'vue'
 
 const TAB_LIST = Object.freeze([
   { icon: 'mdi-account-tie', name: 'About', path: '/' },
-  { icon: 'mdi-book-edit', name: 'Blog', path: '/blog' },
-  { icon: 'mdi-head-lightbulb', name: 'Project', path: '/project' },
-  { icon: 'mdi-book-multiple', name: 'Reading list', path: '/reading-list' },
+  // { icon: 'mdi-book-edit', name: 'Blog', path: '/blog' },
+  // { icon: 'mdi-head-lightbulb', name: 'Project', path: '/project' },
+  // { icon: 'mdi-book-multiple', name: 'Reading list', path: '/reading-list' },
   { icon: 'mdi-circle-medium', name: 'Contact', path: '/contact' }
 ])
 const tab = ref(TAB_LIST[0].name)

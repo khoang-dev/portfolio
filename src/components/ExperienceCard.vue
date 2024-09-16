@@ -6,7 +6,7 @@
       /></a>
     </template>
     <template v-slot:title>
-      <a class="companyNamee" :href="props.companyUrl" target="_blank">{{ props.companyName }}</a>
+      <a class="companyName" :href="props.companyUrl" target="_blank">{{ props.companyName }}</a>
     </template>
     <template v-slot:append>
       {{ props.role }}
@@ -52,7 +52,7 @@ const props = defineProps<ExperienceCardProps>()
   padding: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  .companyNamee {
+  .companyName {
     color: inherit;
     text-decoration: none;
     background-color: transparent;

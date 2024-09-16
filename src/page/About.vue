@@ -7,7 +7,7 @@
           {{ PERSONAL_INTRODUCTION }}
         </p>
       </div>
-      <img class="avatar" width="360" height="460" src="@/assets/image/avatar.jpg" />
+      <img class="avatar" width="360" height="460" :src="PERSONAL_AVATAR" alt="avatar" />
     </div>
     <div class="skills">
       <h1>Skills</h1>
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import ExperienceCard, { type ExperienceCardProps } from '@/components/ExperienceCard.vue'
 import SkillCard, { type SkillCardProps } from '@/components/SkillCard.vue'
-import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
+import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN, PERSONAL_AVATAR } from '@/constant'
 
 const SKILLS_LIST: SkillCardProps[] = [
   // https://techicons.dev/ get icon from here
@@ -197,7 +197,7 @@ time for task.\
     }
 
     .avatar {
-      // padding: 2em;
+      border-radius: 0.5em;
     }
   }
 
