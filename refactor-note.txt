@@ -1,0 +1,5 @@
+
+- Design CSS
+- Design html
+- Mobile responsive
+- Performance and SEO (GG lighthouse)
