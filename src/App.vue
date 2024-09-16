@@ -8,7 +8,7 @@ const TAB_LIST = Object.freeze([
   { icon: 'mdi-book-edit', name: 'Blog', path: '/blog' },
   { icon: 'mdi-head-lightbulb', name: 'Project', path: '/project' },
   { icon: 'mdi-book-multiple', name: 'Reading list', path: '/reading-list' },
-  { icon: 'mdi-contacts', name: 'Contact', path: '/contact' }
+  { icon: 'mdi-circle-medium', name: 'Contact', path: '/contact' }
 ])
 const tab = ref(TAB_LIST[0].name)
 const router = useRouter()
@@ -24,8 +24,7 @@ const router = useRouter()
           :key="tabItem.name"
           :text="tabItem.name"
           :value="tabItem.name"
-          :class="['text-none', tab === tabItem.name && 'tab-active']"
-          :prepend-icon="tabItem.icon"
+          :class="['text-none', 'tab', tab === tabItem.name && 'tab-active']"
           @click="router.push(tabItem.path)"
         >
         </v-tab>
@@ -59,6 +58,12 @@ const router = useRouter()
       font-style: italic;
       color: rgb(6, 6, 85);
       cursor: pointer;
+    }
+    .tab {
+      color: rgb(114 100 92 / 1);
+    }
+    .tab:hover {
+      text-decoration: underline;
     }
     .tab-active {
       color: rgb(6, 6, 85);
