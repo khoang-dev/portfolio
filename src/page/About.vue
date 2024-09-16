@@ -2,10 +2,9 @@
   <div class="about">
     <div class="introduce">
       <div class="description">
-        <h1>Connecting users and technology through perfect interfaces.</h1>
+        <h1>{{ PERSONAL_SLOGAN }}</h1>
         <p>
-          I'm Khoang, an Front-end developer from Vietnam, focus develop web and mobile app. Bring
-          the best UI experience to users.
+          {{ PERSONAL_INTRODUCTION }}
         </p>
       </div>
       <img class="avatar" width="360" height="460" src="@/assets/image/avatar.jpg" />
@@ -24,6 +23,7 @@
 <script setup lang="ts">
 import ExperienceCard, { type ExperienceCardProps } from '@/components/ExperienceCard.vue'
 import SkillCard, { type SkillCardProps } from '@/components/SkillCard.vue'
+import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
 
 const SKILLS_LIST: SkillCardProps[] = [
   // https://techicons.dev/ get icon from here
