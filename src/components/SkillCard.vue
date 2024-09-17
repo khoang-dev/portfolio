@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto card" max-width="900">
+  <v-card class="mx-auto card">
     <template v-slot:title class="title">
       <h3 class="title">
         {{ props.title }}

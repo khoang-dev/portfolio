@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto card" max-width="900">
+  <v-card class="mx-auto card">
     <template v-slot:prepend>
       <a :href="props.companyUrl" target="_blank">
         <img width="40" height="40" :src="props.imageUrl" :alt="`${props.companyName} logo`"

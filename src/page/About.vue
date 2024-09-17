@@ -1,13 +1,13 @@
 <template>
   <div class="about">
     <header class="introduce">
-      <div class="description">
-        <h1>{{ PERSONAL_SLOGAN }}</h1>
+      <section class="description">
+        <h1 class="slogan">{{ PERSONAL_SLOGAN }}</h1>
         <p>
           {{ PERSONAL_INTRODUCTION }}
         </p>
-      </div>
-      <img class="avatar" width="360" height="460" :src="PERSONAL_AVATAR" alt="avatar" />
+      </section>
+      <img class="avatar" width="324" height="414" :src="PERSONAL_AVATAR" alt="avatar" />
     </header>
     <section class="skills">
       <h2>SKILLS</h2>
@@ -176,13 +176,13 @@ time for task.\
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  padding: 0 20em;
+  padding: 0 22%;
 
   .introduce {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    gap: 5em;
+    gap: 3em;
     align-items: flex-end;
     margin-top: 10em;
     padding-bottom: 3em;
@@ -195,6 +195,10 @@ time for task.\
       display: flex;
       flex-direction: column;
       gap: 2em;
+      text-align: left;
+      h1 {
+        font-size: 2.2em;
+      }
     }
 
     .avatar {
