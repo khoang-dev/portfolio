@@ -2,7 +2,7 @@
   <v-card class="mx-auto card" max-width="900">
     <template v-slot:prepend>
       <a :href="props.companyUrl" target="_blank">
-        <img class="avatar" width="40" height="40" :src="props.imageUrl"
+        <img width="40" height="40" :src="props.imageUrl" :alt="`${props.companyName} logo`"
       /></a>
     </template>
     <template v-slot:title>

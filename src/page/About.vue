@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="introduce">
+    <header class="introduce">
       <div class="description">
         <h1>{{ PERSONAL_SLOGAN }}</h1>
         <p>
@@ -8,24 +8,25 @@
         </p>
       </div>
       <img class="avatar" width="360" height="460" :src="PERSONAL_AVATAR" alt="avatar" />
-    </div>
-    <div class="skills">
-      <h1>Skills</h1>
+    </header>
+    <section class="skills">
+      <h2>SKILLS</h2>
       <SkillCard v-for="skills in SKILLS_LIST" v-bind="skills"></SkillCard>
-    </div>
-    <div class="experiences">
-      <h1>Experiences</h1>
+    </section>
+    <section class="experiences">
+      <h2>EXPERIENCES</h2>
       <ExperienceCard v-for="experience in EXPERIENCES" v-bind="experience"></ExperienceCard>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import ExperienceCard, { type ExperienceCardProps } from '@/components/ExperienceCard.vue'
 import SkillCard, { type SkillCardProps } from '@/components/SkillCard.vue'
+
 import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN, PERSONAL_AVATAR } from '@/constant'
 
-const SKILLS_LIST: SkillCardProps[] = [
+const SKILLS_LIST: readonly SkillCardProps[] = Object.freeze([
   // https://techicons.dev/ get icon from here
   {
     title: 'HTML',
@@ -80,8 +81,8 @@ const SKILLS_LIST: SkillCardProps[] = [
       { imageUrl: 'src/assets/image/skills/jest.png', name: 'Jest' }
     ]
   }
-]
-const EXPERIENCES: ExperienceCardProps[] = [
+])
+const EXPERIENCES: readonly ExperienceCardProps[] = Object.freeze([
   {
     imageUrl: 'src/assets/image/company-logo/ipsip-vn.jpeg',
     companyName: 'IPSIP VN',
@@ -169,7 +170,7 @@ time for task.\
     periodTime: { start: 'Nov 2019', end: 'Jun 2020' },
     location: 'HCM City'
   }
-]
+])
 </script>
 
 <style lang="scss" scoped>

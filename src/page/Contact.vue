@@ -1,23 +1,23 @@
 <template>
   <div class="contact">
-    <div class="introdution-information">
+    <header class="introdution-information">
       <img width="70" height="70" :src="PERSONAL_AVATAR" alt="avatar" class="avatar" />
       <h1>{{ PERSONAL_SLOGAN }}</h1>
       <p>
         {{ PERSONAL_INTRODUCTION }}
       </p>
-      <div class="social_network">
+      <section class="social_network">
         <a href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/" target="_blank">
-          <img src="@/assets/image/linkedin-icon.svg" width="40" height="40" />
+          <img src="@/assets/image/linkedin-icon.svg" width="40" height="40" alt="linkedin-icon" />
         </a>
         <a href="https://github.com/khoang-dev" target="_blank">
-          <img src="@/assets/image/github-icon.svg" width="40" height="40" />
+          <img src="@/assets/image/github-icon.svg" width="40" height="40" alt="github-icon" />
         </a>
-      </div>
-    </div>
-    <div class="email-form">
-      GET IN TOUCH
-      <v-form @submit="submit" class="form">
+      </section>
+    </header>
+    <section class="email-form">
+      <label for="form">GET IN TOUCH</label>
+      <v-form @submit="submit" class="form" id="form">
         <v-text-field
           v-model="email"
           class="mb-2"
@@ -28,7 +28,7 @@
         <v-textarea label="Your message" single-line></v-textarea>
         <v-btn class="mt-2" type="submit" rounded="xl" color="black">Submit</v-btn>
       </v-form>
-    </div>
+    </section>
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,14 +1,14 @@
 <template>
   <v-card class="mx-auto card" max-width="900">
     <template v-slot:title class="title">
-      <h4 class="title">
+      <h3 class="title">
         {{ props.title }}
-      </h4>
+      </h3>
     </template>
     <v-divider />
     <v-card-text class="py-5 skill-list">
       <div v-for="skill in props.skills" class="skill">
-        <img :src="skill.imageUrl" :alt="skill.name" width="100" height="100" />
+        <img :src="skill.imageUrl" :alt="`${skill.name} logo`" width="100" height="100" />
         {{ skill.name }}
       </div>
     </v-card-text>
@@ -36,7 +36,6 @@ const props = defineProps<SkillCardProps>()
   .title {
     color: #795548;
     font-weight: 300;
-    font-size: 1.5em;
   }
   .skill-list {
     display: flex;
