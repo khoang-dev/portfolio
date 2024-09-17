@@ -90,14 +90,12 @@ const EXPERIENCES: readonly ExperienceCardProps[] = Object.freeze([
     role: 'Front-end developer',
     description: 'Build web and app to serve customers car repair process.',
     responsibilities:
-      '+ Implement, maintain, refactor a lot of feature (appointment stat, review stat, step\
-editing, show advertisement...).\
+      '+ Implement, maintain, refactor a lot of feature (appointment stat, review stat, step editing, show advertisement...).\
 \n+ Suggest idea and solution with manager (add storybook, add CI...).\
 \n+ Handle responsive, configure and build for android mobile app with Capacitor.\
 \n+ Handle almost all charts on UI with chartjs.\
 \n+ Configure and implement to save file, image on mobile.\
-\n+ Optimized performance when calling multiple http requests at the same time (reduced\
-\nfrom 5 seconds to 1 second).\
+\n+ Optimized performance when calling multiple http requests at the same time (reduced from 5 seconds to 1 second).\
 \n+ Working closely with manager, backend developer, QA to intergrate code, report, clear\
 requirement and fix bug.',
     periodTime: { start: 'Apr 2023', end: 'Present' },
@@ -110,11 +108,9 @@ requirement and fix bug.',
     role: 'Front-end developer',
     description: 'Developing insurance web and build mobile app from web.',
     responsibilities:
-      '+ Implement and maintain a lot of feature (sleep tracking, provide health information,\
-\nradar chart, multi-line chart...).\
+      '+ Implement and maintain a lot of feature (sleep tracking, provide health information, radar chart, multi-line chart...).\
 \n+ Write unit test and storybook for component.\
-\n+ Working closely with team member, team leader to analysis requirement and estimate\
-time for task.\
+\n+ Working closely with team member, team leader to analysis requirement and estimate time for task.\
 \n+ Mainly responsible for sonarqube configuration to test for code smells and coverage.\
 \n+ Support team leader in managing work when necessary.\
 \n+ Review code for other members.\
@@ -133,8 +129,7 @@ model.',
     role: 'Front-end developer',
     description: 'Maintain web sales system.',
     responsibilities:
-      '+ Working closely with team member, team leader to analyze requirements and estimate\
-time for task.\
+      '+ Working closely with team member, team leader to analyze requirements and estimate time for task.\
 \n+ Responsible for researching documents, then presenting them to everyone in the team.\
 \n+ Work with customers to clear requirement.\
 \n+ Work with Backend developer to combine code.\
@@ -176,7 +171,7 @@ time for task.\
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  padding: 0 22%;
+  padding: 0 18em;
 
   .introduce {
     text-align: center;

@@ -41,7 +41,7 @@ function submit() {}
 <style lang="scss" scoped>
 .contact {
   width: 100%;
-  padding: 0 20em;
+  padding: 0 18em;
   .introdution-information {
     width: 100%;
     display: flex;

@@ -39,7 +39,7 @@ const router = useRouter()
     border-bottom: 1px solid;
     .logo {
       display: block;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 2em;
       font-style: italic;
       text-shadow: 1px 1px;
