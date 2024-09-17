@@ -52,6 +52,9 @@ function submit() {}
     .avatar {
       border-radius: 100%;
     }
+    h1 {
+      font-size: 1.7em;
+    }
     .social_network {
       display: flex;
       gap: 0.7em;
@@ -63,7 +66,7 @@ function submit() {}
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    padding: 5em 0;
+    padding: 3em 0;
     .form {
       display: flex;
       flex-direction: column;
