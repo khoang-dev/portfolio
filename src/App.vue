@@ -28,6 +28,7 @@ const router = useRouter()
 <style scoped lang="scss">
 .container {
   background-color: rgb(240 240 232 /1);
+  min-height: 100vh;
   header {
     line-height: 1.5;
     max-height: 100vh;

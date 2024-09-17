@@ -60,7 +60,6 @@ function submit() {}
 
   .email-form {
     border-top: 1px solid;
-    border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
