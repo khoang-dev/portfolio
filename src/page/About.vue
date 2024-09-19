@@ -31,60 +31,60 @@ const SKILLS_LIST: readonly SkillCardProps[] = Object.freeze([
   {
     title: 'HTML',
     skills: [
-      { imageUrl: 'src/assets/image/skills/html5.png', name: 'HTML5' },
-      { imageUrl: 'src/assets/image/skills/react.png', name: 'JSX' }
+      { imageUrl: '/assets/image/skills/html5.png', name: 'HTML5' },
+      { imageUrl: '/assets/image/skills/react.png', name: 'JSX' }
     ]
   },
   {
     title: 'CSS',
     skills: [
-      { imageUrl: 'src/assets/image/skills/css3.png', name: 'CSS3' },
-      { imageUrl: 'src/assets/image/skills/sass.png', name: 'SASS' },
-      { imageUrl: 'src/assets/image/skills/bootstrap.png', name: 'Bootstrap' },
-      { imageUrl: 'src/assets/image/skills/tailwind.png', name: 'Tailwind' }
+      { imageUrl: '/assets/image/skills/css3.png', name: 'CSS3' },
+      { imageUrl: '/assets/image/skills/sass.png', name: 'SASS' },
+      { imageUrl: '/assets/image/skills/bootstrap.png', name: 'Bootstrap' },
+      { imageUrl: '/assets/image/skills/tailwind.png', name: 'Tailwind' }
     ]
   },
   {
     title: 'Javascript',
     skills: [
-      { imageUrl: 'src/assets/image/skills/javascript.png', name: 'JavaScript' },
-      { imageUrl: 'src/assets/image/skills/typescript.png', name: 'TypeScript' },
-      { imageUrl: 'src/assets/image/skills/vue.png', name: 'Vue' },
-      { imageUrl: 'src/assets/image/skills/quasar.png', name: 'Quasar' },
-      { imageUrl: 'src/assets/image/skills/react.png', name: 'React' },
-      { imageUrl: 'src/assets/image/skills/nuxt.png', name: 'Nuxt' }
+      { imageUrl: '/assets/image/skills/javascript.png', name: 'JavaScript' },
+      { imageUrl: '/assets/image/skills/typescript.png', name: 'TypeScript' },
+      { imageUrl: '/assets/image/skills/vue.png', name: 'Vue' },
+      { imageUrl: '/assets/image/skills/quasar.png', name: 'Quasar' },
+      { imageUrl: '/assets/image/skills/react.png', name: 'React' },
+      { imageUrl: '/assets/image/skills/nuxt.png', name: 'Nuxt' }
     ]
   },
   {
     title: 'Back-End',
     skills: [
-      { imageUrl: 'src/assets/image/skills/node.png', name: 'Node' },
-      { imageUrl: 'src/assets/image/skills/c++.png', name: 'C++' },
-      { imageUrl: 'src/assets/image/skills/mongo-db.png', name: 'MongoDB' },
-      { imageUrl: 'src/assets/image/skills/postgres-sql.png', name: 'PostgreSQL' }
+      { imageUrl: '/assets/image/skills/node.png', name: 'Node' },
+      { imageUrl: '/assets/image/skills/c++.png', name: 'C++' },
+      { imageUrl: '/assets/image/skills/mongo-db.png', name: 'MongoDB' },
+      { imageUrl: '/assets/image/skills/postgres-sql.png', name: 'PostgreSQL' }
     ]
   },
   {
     title: 'Build Tools',
     skills: [
-      { imageUrl: 'src/assets/image/skills/webpack.png', name: 'Webpack' },
-      { imageUrl: 'src/assets/image/skills/vite.png', name: 'Vite' }
+      { imageUrl: '/assets/image/skills/webpack.png', name: 'Webpack' },
+      { imageUrl: '/assets/image/skills/vite.png', name: 'Vite' }
     ]
   },
   {
     title: 'Other',
     skills: [
-      { imageUrl: 'src/assets/image/skills/github.png', name: 'Github' },
-      { imageUrl: 'src/assets/image/skills/figma.png', name: 'Figma' },
-      { imageUrl: 'src/assets/image/skills/capacitor.png', name: 'Capacitor' },
-      { imageUrl: 'src/assets/image/skills/vuetify.png', name: 'Vuetify' },
-      { imageUrl: 'src/assets/image/skills/jest.png', name: 'Jest' }
+      { imageUrl: '/assets/image/skills/github.png', name: 'Github' },
+      { imageUrl: '/assets/image/skills/figma.png', name: 'Figma' },
+      { imageUrl: '/assets/image/skills/capacitor.png', name: 'Capacitor' },
+      { imageUrl: '/assets/image/skills/vuetify.png', name: 'Vuetify' },
+      { imageUrl: '/assets/image/skills/jest.png', name: 'Jest' }
     ]
   }
 ])
 const EXPERIENCES: readonly ExperienceCardProps[] = Object.freeze([
   {
-    imageUrl: 'src/assets/image/company-logo/ipsip-vn.jpeg',
+    imageUrl: '/assets/image/company-logo/ipsip-vn.jpeg',
     companyName: 'IPSIP VN',
     companyUrl: 'https://www.ipsip.vn/',
     role: 'Front-end developer',
@@ -102,7 +102,7 @@ requirement and fix bug.',
     location: 'HCM City'
   },
   {
-    imageUrl: 'src/assets/image/company-logo/hitachi-digital-services.jpeg',
+    imageUrl: '/assets/image/company-logo/hitachi-digital-services.jpeg',
     companyName: 'Hitachi Digital Services',
     companyUrl: 'https://hitachids.com/',
     role: 'Front-end developer',
@@ -123,7 +123,7 @@ model.',
     location: 'HCM City'
   },
   {
-    imageUrl: 'src/assets/image/company-logo/hitachi-digital-services.jpeg',
+    imageUrl: '/assets/image/company-logo/hitachi-digital-services.jpeg',
     companyName: 'Hitachi Digital Services',
     companyUrl: 'https://hitachids.com/',
     role: 'Front-end developer',
@@ -138,7 +138,7 @@ model.',
     location: 'HCM City'
   },
   {
-    imageUrl: 'src/assets/image/company-logo/hitachi-digital-services.jpeg',
+    imageUrl: '/assets/image/company-logo/hitachi-digital-services.jpeg',
     companyName: 'Hitachi Digital Services',
     companyUrl: 'https://hitachids.com/',
     role: 'Full-stack developer',
@@ -154,7 +154,7 @@ model.',
     location: 'HCM City'
   },
   {
-    imageUrl: 'src/assets/image/company-logo/fpt-software.jpeg',
+    imageUrl: '/assets/image/company-logo/fpt-software.jpeg',
     companyName: 'FPT Software',
     companyUrl: 'https://fptsoftware.com/',
     role: 'Software Developer',

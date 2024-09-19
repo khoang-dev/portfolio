@@ -8,10 +8,10 @@
       </p>
       <section class="social_network">
         <a href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/" target="_blank">
-          <img src="@/assets/image/linkedin-icon.svg" width="40" height="40" alt="linkedin-icon" />
+          <img src="/assets/image/linkedin-icon.svg" width="40" height="40" alt="linkedin-icon" />
         </a>
         <a href="https://github.com/khoang-dev" target="_blank">
-          <img src="@/assets/image/github-icon.svg" width="40" height="40" alt="github-icon" />
+          <img src="/assets/image/github-icon.svg" width="40" height="40" alt="github-icon" />
         </a>
       </section>
     </header>
