@@ -17,26 +17,62 @@
     </header>
     <section class="email-form">
       <label for="form">GET IN TOUCH</label>
-      <v-form @submit="submit" class="form" id="form">
+      <form @submit="submit" class="form" id="form">
         <v-text-field
-          v-model="email"
+          v-model="email.value.value"
           class="mb-2"
           label="Email"
-          clearable
+          :error-messages="email.errorMessage.value"
           single-line
         ></v-text-field>
-        <v-textarea label="Your message" single-line></v-textarea>
+        <v-textarea
+          v-model="message.value.value"
+          label="Your message"
+          :error-messages="message.errorMessage.value"
+          single-line
+        ></v-textarea>
         <v-btn class="mt-2" type="submit" rounded="xl" color="black">Submit</v-btn>
-      </v-form>
+      </form>
     </section>
   </div>
 </template>
 <script lang="ts" setup>
 import { PERSONAL_AVATAR, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
-import { ref } from 'vue'
+import sendEmail from '@/assets/smtp/smtp.js'
+import { toast } from 'vue3-toastify'
+import { useField, useForm } from 'vee-validate'
 
-const email = ref<string>()
-function submit() {}
+const { handleSubmit } = useForm({
+  validationSchema: {
+    email(value: string) {
+      if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true
+
+      return 'Must be a valid e-mail.'
+    },
+    message(value: string) {
+      if (value?.length) return true
+
+      return 'Message needs to be at least 1 characters.'
+    }
+  }
+})
+const email = useField('email')
+const message = useField('message')
+
+const submit = handleSubmit(async (values) => {
+  try {
+    await sendEmail({
+      SecureToken: 'ceeb2f09-5582-4dbb-88e9-bcd5f7db8921',
+      To: 'kvdvo1997@gmail.com',
+      From: 'kvdvo1997@gmail.com',
+      Subject: `New message from email ${values.email}`,
+      Body: values.message
+    })
+    toast.success('Sent', { position: 'top-center' })
+  } catch (error) {
+    toast.error('Send email failure', { position: 'top-center' })
+  }
+})
 </script>
 <style lang="scss" scoped>
 .contact {
