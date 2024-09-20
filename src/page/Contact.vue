@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <header class="introdution-information">
-      <img width="70" height="70" :src="PERSONAL_AVATAR" alt="avatar" class="avatar" />
+      <img width="70" height="70" :src="PERSONAL_AVATAR_ICON_URL" alt="avatar" class="avatar" />
       <h1>{{ PERSONAL_SLOGAN }}</h1>
       <p>
         {{ PERSONAL_INTRODUCTION }}
@@ -37,7 +37,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { PERSONAL_AVATAR, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
+import { PERSONAL_AVATAR_ICON_URL, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
 import sendEmail from '@/assets/smtp/smtp.js'
 import { toast } from 'vue3-toastify'
 import { useField, useForm } from 'vee-validate'

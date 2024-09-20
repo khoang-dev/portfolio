@@ -7,7 +7,7 @@
           {{ PERSONAL_INTRODUCTION }}
         </p>
       </section>
-      <img class="avatar" width="324" height="414" :src="PERSONAL_AVATAR" alt="avatar" />
+      <img class="avatar" width="324" height="414" :src="PERSONAL_AVATAR_IMAGE_URL" alt="avatar" />
     </header>
     <section class="skills">
       <h2>SKILLS</h2>
@@ -24,7 +24,7 @@
 import ExperienceCard, { type ExperienceCardProps } from '@/components/ExperienceCard.vue'
 import SkillCard, { type SkillCardProps } from '@/components/SkillCard.vue'
 
-import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN, PERSONAL_AVATAR } from '@/constant'
+import { PERSONAL_INTRODUCTION, PERSONAL_SLOGAN, PERSONAL_AVATAR_IMAGE_URL } from '@/constant'
 
 const SKILLS_LIST: readonly SkillCardProps[] = Object.freeze([
   // https://techicons.dev/ get icon from here

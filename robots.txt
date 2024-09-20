@@ -1,0 +1,16 @@
+#User-agent: *
+#Allow: /
+
+# Disallow admin and private areas
+#Disallow: /admin/
+#Disallow: /private/
+#Disallow: /includes/
+#Disallow: /cgi-bin/
+
+# Disallow specific file types
+#Disallow: *.pdf
+#Disallow: *.doc
+#Disallow: *.xls
+
+# Add your sitemap location
+# Sitemap: https://www.yourwebsite.com/sitemap.xml
