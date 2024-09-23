@@ -40,10 +40,11 @@
   </v-container>
 </template>
 <script lang="ts" setup>
-import { PERSONAL_AVATAR_ICON_URL, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
-import sendEmail from '@/assets/smtp/smtp.js'
 import { toast } from 'vue3-toastify'
 import { useField, useForm } from 'vee-validate'
+
+import { PERSONAL_AVATAR_ICON_URL, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
+import sendEmail from '@/assets/smtp/smtp.js'
 
 const { handleSubmit } = useForm({
   validationSchema: {
@@ -77,6 +78,7 @@ const submit = handleSubmit(async (values) => {
   }
 })
 </script>
+
 <style lang="scss" scoped>
 .contact {
   width: 100%;
@@ -99,7 +101,6 @@ const submit = handleSubmit(async (values) => {
       gap: 0.7em;
     }
   }
-
   .email-form {
     border-top: 1px solid;
     display: flex;

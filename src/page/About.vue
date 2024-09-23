@@ -182,7 +182,6 @@ model.',
 .about {
   width: 100%;
   // padding: 0 18em;
-
   .introduce {
     text-align: center;
     display: flex;
@@ -205,12 +204,10 @@ model.',
         font-size: 2.2em;
       }
     }
-
     .avatar {
       border-radius: 0.5em;
     }
   }
-
   .skills,
   .experiences {
     display: flex;
