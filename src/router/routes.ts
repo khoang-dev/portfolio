@@ -10,14 +10,19 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../page/About.vue')
   },
   // {
-  //   path: '/',
-  //   name: '/blog',
-  //   component: () => import('../views/AboutView.vue')
+  //   path: '/blog',
+  //   name: 'Blog',
+  //   component: () => import('../page/About.vue')
   // },
   // {
-  //   path: '/',
-  //   name: '/project',
-  //   component: () => import('../views/AboutView.vue')
+  //   path: '/reading',
+  //   name: 'Reading',
+  //   component: () => import('../page/About.vue')
+  // },
+  // {
+  //   path: '/project',
+  //   name: 'Project',
+  //   component: () => import('../page/About.vue')
   // },
   // {
   //   path: '/',
