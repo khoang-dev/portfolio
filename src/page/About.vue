@@ -1,13 +1,23 @@
 <template>
-  <div class="about">
+  <v-container class="about">
     <header class="introduce">
-      <section class="description">
-        <h1 class="slogan">{{ PERSONAL_SLOGAN }}</h1>
-        <p>
-          {{ PERSONAL_INTRODUCTION }}
-        </p>
-      </section>
-      <img class="avatar" width="324" height="414" :src="PERSONAL_AVATAR_IMAGE_URL" alt="avatar" />
+      <v-row>
+        <v-col align-self="end" cols="12" md="8" class="description">
+          <h1>{{ PERSONAL_SLOGAN }}</h1>
+          <p>
+            {{ PERSONAL_INTRODUCTION }}
+          </p>
+        </v-col>
+        <v-col cols="12" md="4">
+          <img
+            class="avatar"
+            width="324"
+            height="414"
+            :src="PERSONAL_AVATAR_IMAGE_URL"
+            alt="avatar"
+          />
+        </v-col>
+      </v-row>
     </header>
     <section class="skills">
       <h2>SKILLS</h2>
@@ -17,7 +27,7 @@
       <h2>EXPERIENCES</h2>
       <ExperienceCard v-for="experience in EXPERIENCES" v-bind="experience"></ExperienceCard>
     </section>
-  </div>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -171,7 +181,7 @@ model.',
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  padding: 0 18em;
+  // padding: 0 18em;
 
   .introduce {
     text-align: center;
@@ -186,7 +196,7 @@ model.',
     .description {
       border-top: 1px solid;
       // border-bottom: 1px solid;
-      padding: 2em;
+      // padding: 2em;
       display: flex;
       flex-direction: column;
       gap: 2em;

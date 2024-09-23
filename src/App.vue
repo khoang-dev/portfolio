@@ -1,16 +1,22 @@
 <template>
   <div class="container">
     <header>
-      <RouterLink class="logo" :to="routes[0].path">Khoang Vo</RouterLink>
-      <nav class="navigation">
-        <RouterLink
-          v-for="item in routes"
-          :key="item.name"
-          :to="item.path"
-          class="navigation-item"
-          >{{ item.name }}</RouterLink
-        >
-      </nav>
+      <v-row align="center" justify="space-between">
+        <v-col cols="12" sm="2">
+          <RouterLink class="logo" :to="routes[0].path">Khoang Vo</RouterLink>
+        </v-col>
+        <v-col cols="12" sm="2">
+          <nav class="navigation">
+            <RouterLink
+              v-for="item in routes"
+              :key="item.name"
+              :to="item.path"
+              class="navigation-item"
+              >{{ item.name }}</RouterLink
+            >
+          </nav>
+        </v-col>
+      </v-row>
     </header>
     <main>
       <RouterView />
@@ -50,6 +56,7 @@ const router = useRouter()
     }
     .navigation {
       display: flex;
+      justify-content: end;
       gap: 1em;
       .navigation-item {
         text-decoration: none;

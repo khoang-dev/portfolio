@@ -2,4 +2,5 @@
 - SEO (GG lighthouse) - done
 - Performance - done
 - Design CSS -> Tinh chinh để  color các thành phần đồng điệu vs nhau dùng 1 color cho nhiều vị trí.
-- Mobile responsive
+- Mobile responsive done
+- Research PostCSS.

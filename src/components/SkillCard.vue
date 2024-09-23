@@ -7,10 +7,12 @@
     </template>
     <v-divider />
     <v-card-text class="py-5 skill-list">
-      <div v-for="skill in props.skills" class="skill">
-        <img :src="skill.imageUrl" :alt="`${skill.name} logo`" width="100" height="100" />
-        {{ skill.name }}
-      </div>
+      <v-row>
+        <v-col cols="6" sm="2" v-for="skill in props.skills" class="skill">
+          <img :src="skill.imageUrl" :alt="`${skill.name} logo`" width="100" height="100" />
+          {{ skill.name }}
+        </v-col>
+      </v-row>
     </v-card-text>
   </v-card>
 </template>

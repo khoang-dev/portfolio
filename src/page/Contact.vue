@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <v-container class="contact">
     <header class="introdution-information">
       <img width="70" height="70" :src="PERSONAL_AVATAR_ICON_URL" alt="avatar" class="avatar" />
       <h1>{{ PERSONAL_SLOGAN }}</h1>
@@ -15,26 +15,29 @@
         </a>
       </section>
     </header>
-    <section class="email-form">
-      <label for="form">GET IN TOUCH</label>
-      <form @submit="submit" class="form" id="form">
-        <v-text-field
-          v-model="email.value.value"
-          class="mb-2"
-          label="Email"
-          :error-messages="email.errorMessage.value"
-          single-line
-        ></v-text-field>
-        <v-textarea
-          v-model="message.value.value"
-          label="Your message"
-          :error-messages="message.errorMessage.value"
-          single-line
-        ></v-textarea>
-        <v-btn class="mt-2" type="submit" rounded="xl" color="black">Submit</v-btn>
-      </form>
-    </section>
-  </div>
+    <v-row class="email-form">
+      <v-col cols="12" sm="4">
+        <label for="form">GET IN TOUCH</label>
+      </v-col>
+      <v-col cols="12" sm="8">
+        <form @submit="submit" class="form" id="form">
+          <v-text-field
+            v-model="email.value.value"
+            label="Email"
+            :error-messages="email.errorMessage.value"
+            single-line
+          ></v-text-field>
+          <v-textarea
+            v-model="message.value.value"
+            label="Your message"
+            :error-messages="message.errorMessage.value"
+            single-line
+          ></v-textarea>
+          <v-btn class="mt-2" type="submit" rounded="xl" color="black">Submit</v-btn>
+        </form>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script lang="ts" setup>
 import { PERSONAL_AVATAR_ICON_URL, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
@@ -77,7 +80,7 @@ const submit = handleSubmit(async (values) => {
 <style lang="scss" scoped>
 .contact {
   width: 100%;
-  padding: 0 18em;
+  // padding: 0 18em;
   .introdution-information {
     width: 100%;
     display: flex;
@@ -106,7 +109,6 @@ const submit = handleSubmit(async (values) => {
     .form {
       display: flex;
       flex-direction: column;
-      width: 60%;
       max-width: 50em;
     }
   }
