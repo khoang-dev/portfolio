@@ -1,5 +1,6 @@
 import '@/assets/normalize.css'
 import 'vue3-toastify/dist/index.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 import { createApp } from 'vue'
 // import { createPinia } from 'pinia'

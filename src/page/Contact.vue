@@ -8,10 +8,12 @@
       </p>
       <section class="social_network">
         <a href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/" target="_blank">
-          <img src="/assets/image/linkedin-icon.svg" width="40" height="40" alt="linkedin-icon" />
+          <v-icon size="x-large" color="black"> mdi-linkedin </v-icon>
+          <v-tooltip activator="parent">Connect on Linkedin</v-tooltip>
         </a>
         <a href="https://github.com/khoang-dev" target="_blank">
-          <img src="/assets/image/github-icon.svg" width="40" height="40" alt="github-icon" />
+          <v-icon size="x-large" color="black"> mdi-github </v-icon>
+          <v-tooltip activator="parent">Check out my Github profile</v-tooltip>
         </a>
       </section>
     </header>
