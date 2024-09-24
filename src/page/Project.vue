@@ -7,7 +7,7 @@
     <v-divider opacity="1"></v-divider>
     <section>
       <v-row class="d-flex my-8">
-        <v-col cols="12" sm="4" v-for="project in PROJECT_LIST" :key="project.name">
+        <v-col cols="12" sm="6" md="4" v-for="project in PROJECT_LIST" :key="project.name">
           <ProjectCard v-bind="project"></ProjectCard>
         </v-col>
       </v-row>

@@ -10,7 +10,8 @@
       <v-row>
         <v-col
           cols="6"
-          sm="2"
+          sm="4"
+          md="2"
           v-for="skill in props.skills"
           class="d-flex flex-column align-center ga-4 w-auto text-body-1"
           :key="skill.name"
