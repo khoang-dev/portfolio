@@ -8,7 +8,7 @@
     <v-divider />
     <v-card-text class="py-5 skill-list">
       <v-row>
-        <v-col cols="6" sm="2" v-for="skill in props.skills" class="skill">
+        <v-col cols="6" sm="2" v-for="skill in props.skills" class="skill" :key="skill.name">
           <img :src="skill.imageUrl" :alt="`${skill.name} logo`" width="100" height="100" />
           {{ skill.name }}
         </v-col>
