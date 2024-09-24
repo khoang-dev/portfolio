@@ -1,25 +1,32 @@
 <template>
-  <v-card class="mx-auto card">
+  <v-card class="mx-auto w-100 pa-4 card">
     <template v-slot:prepend>
       <a :href="props.companyUrl" target="_blank">
-        <img width="40" height="40" :src="props.imageUrl" :alt="`${props.companyName} logo`"
-      /></a>
+        <img
+          width="40"
+          height="40"
+          :src="props.imageUrl"
+          :alt="`${props.companyName} logo`"
+          class="d-block"
+        />
+      </a>
     </template>
     <template v-slot:title>
-      <a class="companyName" :href="props.companyUrl" target="_blank">{{ props.companyName }}</a>
+      <a class="text-decoration-none companyName" :href="props.companyUrl" target="_blank">{{
+        props.companyName
+      }}</a>
     </template>
     <template v-slot:append>
       {{ props.role }}
     </template>
     <v-divider />
     <v-card-text class="py-2">
-      <div class="description">
+      <div class="font-italic py-1 opacity-70">
         {{ props.description }}
       </div>
-      <div class="responsibilities">
+      <div class="d-inline responsibilities">
         {{ props.responsibilities }}
       </div>
-      <!-- <div class="accomplishments"></div> -->
     </v-card-text>
     <v-divider />
     <v-card-actions>
@@ -47,26 +54,16 @@ const props = defineProps<ExperienceCardProps>()
 </script>
 <style lang="scss" scoped>
 .card {
-  width: 100%;
   background-color: rgb(241, 241, 237);
-  padding: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   .companyName {
     color: inherit;
-    text-decoration: none;
-    background-color: transparent;
   }
   .companyNamee:hover {
     text-decoration: underline;
   }
-  .description {
-    font-style: italic;
-    padding: 0.5em 0;
-    opacity: 0.75;
-  }
   .responsibilities {
-    display: inline;
     white-space: pre-line;
   }
 }

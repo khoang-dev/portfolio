@@ -1,8 +1,14 @@
 <template>
-  <v-container class="about">
-    <header class="introduce">
+  <v-container class="w-100 about">
+    <header class="d-flex justify-space-between ga-12 align-end pb-12 introduce">
       <v-row>
-        <v-col align-self="end" cols="12" md="8" class="description">
+        <v-col
+          align-self="end"
+          cols="12"
+          md="8"
+          class="d-flex flex-column ga-8 text-left description"
+        >
+          <v-divider opacity="1"></v-divider>
           <h1>{{ PERSONAL_SLOGAN }}</h1>
           <p>
             {{ PERSONAL_INTRODUCTION }}
@@ -10,7 +16,7 @@
         </v-col>
         <v-col cols="12" md="4">
           <img
-            class="avatar"
+            class="rounded-lg"
             width="324"
             height="414"
             :src="PERSONAL_AVATAR_IMAGE_URL"
@@ -19,11 +25,13 @@
         </v-col>
       </v-row>
     </header>
-    <section class="skills">
+    <v-divider opacity="1"></v-divider>
+    <section class="d-flex flex-column align-center mt-8 ga-16 pb-12 skills">
       <h2>SKILLS</h2>
       <SkillCard v-for="skills in SKILLS_LIST" v-bind="skills" :key="skills.title"></SkillCard>
     </section>
-    <section class="experiences">
+    <v-divider opacity="1"></v-divider>
+    <section class="d-flex flex-column align-center mt-8 ga-16 pb-12">
       <h2>EXPERIENCES</h2>
       <ExperienceCard v-for="experience in EXPERIENCES" v-bind="experience"></ExperienceCard>
     </section>
@@ -180,43 +188,14 @@ model.',
 
 <style lang="scss" scoped>
 .about {
-  width: 100%;
-  // padding: 0 18em;
   .introduce {
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    gap: 3em;
-    align-items: flex-end;
     margin-top: 10em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid;
-
     .description {
-      border-top: 1px solid;
-      // border-bottom: 1px solid;
-      // padding: 2em;
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-      text-align: left;
       h1 {
         font-size: 2.2em;
       }
     }
-    .avatar {
-      border-radius: 0.5em;
-    }
-  }
-  .skills,
-  .experiences {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2em;
-    gap: 4em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid;
   }
 }
 </style>

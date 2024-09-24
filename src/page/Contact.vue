@@ -1,12 +1,18 @@
 <template>
-  <v-container class="contact">
-    <header class="introdution-information">
-      <img width="70" height="70" :src="PERSONAL_AVATAR_ICON_URL" alt="avatar" class="avatar" />
+  <v-container class="w-100 contact">
+    <header class="w-100 d-flex flex-column ga-3 py-16 introdution-information">
+      <img
+        width="70"
+        height="70"
+        :src="PERSONAL_AVATAR_ICON_URL"
+        alt="avatar"
+        class="rounded-circle"
+      />
       <h1>{{ PERSONAL_SLOGAN }}</h1>
       <p>
         {{ PERSONAL_INTRODUCTION }}
       </p>
-      <section class="social_network">
+      <section class="d-flex ga-3">
         <a href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/" target="_blank">
           <v-icon size="x-large" color="black"> mdi-linkedin </v-icon>
           <v-tooltip activator="parent">Connect on Linkedin</v-tooltip>
@@ -17,12 +23,13 @@
         </a>
       </section>
     </header>
-    <v-row class="email-form">
+    <v-divider opacity="1" />
+    <v-row class="d-flex justify-space-between py-12 font-weight-bold email-form">
       <v-col cols="12" sm="4">
         <label for="form">GET IN TOUCH</label>
       </v-col>
       <v-col cols="12" sm="8">
-        <form @submit="submit" class="form" id="form">
+        <form @submit="submit" class="d-flex flex-column form" id="form">
           <v-text-field
             v-model="email.value.value"
             label="Email"
@@ -83,35 +90,14 @@ const submit = handleSubmit(async (values) => {
 
 <style lang="scss" scoped>
 .contact {
-  width: 100%;
-  // padding: 0 18em;
   .introdution-information {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     max-width: 40em;
-    padding: 4em 0;
-    .avatar {
-      border-radius: 100%;
-    }
     h1 {
       font-size: 1.7em;
     }
-    .social_network {
-      display: flex;
-      gap: 0.7em;
-    }
   }
   .email-form {
-    border-top: 1px solid;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    padding: 3em 0;
     .form {
-      display: flex;
-      flex-direction: column;
       max-width: 50em;
     }
   }

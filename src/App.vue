@@ -1,23 +1,28 @@
 <template>
   <div class="container">
-    <header>
-      <v-row align="center" justify="space-between">
+    <header class="w-100 d-flex justify-space-between align-center py-1 px-16">
+      <v-row class="d-flex align-center justify-space-between">
         <v-col cols="12" sm="2">
-          <RouterLink class="logo" :to="routes[0].path">Khoang Vo</RouterLink>
+          <RouterLink
+            class="d-block font-weight-bold font-italic cursor-pointer text-decoration-none logo"
+            :to="routes[0].path"
+            >Khoang Vo</RouterLink
+          >
         </v-col>
         <v-col cols="12" sm="2">
-          <nav class="navigation">
+          <nav class="d-flex justify-end ga-4 navigation">
             <RouterLink
               v-for="item in routes"
               :key="item.name"
               :to="item.path"
-              class="navigation-item"
+              class="text-decoration-none font-weight-normal navigation-item"
               >{{ item.name }}</RouterLink
             >
           </nav>
         </v-col>
       </v-row>
     </header>
+    <v-divider opacity="1" />
     <main>
       <RouterView />
     </main>
@@ -38,29 +43,13 @@ const router = useRouter()
   header {
     line-height: 1.5;
     max-height: 100vh;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.1em 5em;
-    border-bottom: 1px solid;
     .logo {
-      display: block;
-      font-weight: 700;
       font-size: 2em;
-      font-style: italic;
       text-shadow: 1px 1px;
       color: rgb(34, 33, 33);
-      cursor: pointer;
-      text-decoration: none;
     }
     .navigation {
-      display: flex;
-      justify-content: end;
-      gap: 1em;
       .navigation-item {
-        text-decoration: none;
-        font-weight: normal;
         color: rgb(114 100 92 / 1);
       }
       .navigation-item:hover {

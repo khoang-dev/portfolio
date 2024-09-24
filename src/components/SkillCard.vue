@@ -1,14 +1,20 @@
 <template>
-  <v-card class="mx-auto card">
-    <template v-slot:title class="title">
-      <h3 class="title">
+  <v-card class="mx-auto w-100 pa-1 card">
+    <template v-slot:title>
+      <h3 class="font-weight-light title">
         {{ props.title }}
       </h3>
     </template>
     <v-divider />
-    <v-card-text class="py-5 skill-list">
+    <v-card-text class="py-5 d-flex ga-14 skill-list">
       <v-row>
-        <v-col cols="6" sm="2" v-for="skill in props.skills" class="skill" :key="skill.name">
+        <v-col
+          cols="6"
+          sm="2"
+          v-for="skill in props.skills"
+          class="d-flex flex-column align-center ga-4 w-auto text-body-1"
+          :key="skill.name"
+        >
           <img :src="skill.imageUrl" :alt="`${skill.name} logo`" width="100" height="100" />
           {{ skill.name }}
         </v-col>
@@ -30,29 +36,14 @@ const props = defineProps<SkillCardProps>()
 </script>
 <style lang="scss" scoped>
 .card {
-  width: 100%;
   background-color: rgb(241, 241, 237);
-  padding: 0.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   .title {
     color: #795548;
-    font-weight: 300;
   }
-  .skill-list {
-    display: flex;
-    gap: 3.5em;
-    .skill {
-      width: fit-content;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1em;
-      font-size: 1.1em;
-    }
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
