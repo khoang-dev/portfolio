@@ -21,7 +21,7 @@
     </header>
     <section class="skills">
       <h2>SKILLS</h2>
-      <SkillCard v-for="skills in SKILLS_LIST" v-bind="skills"></SkillCard>
+      <SkillCard v-for="skills in SKILLS_LIST" v-bind="skills" :key="skills.title"></SkillCard>
     </section>
     <section class="experiences">
       <h2>EXPERIENCES</h2>
