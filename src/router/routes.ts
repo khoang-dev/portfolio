@@ -19,11 +19,11 @@ const routes: RouteRecordRaw[] = [
   //   name: 'Reading',
   //   component: () => import('../page/About.vue')
   // },
-  // {
-  //   path: '/project',
-  //   name: 'Project',
-  //   component: () => import('../page/About.vue')
-  // },
+  {
+    path: '/project',
+    name: 'Project',
+    component: () => import('../page/Project.vue')
+  },
   // {
   //   path: '/',
   //   name: '/reading-list',
