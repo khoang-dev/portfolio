@@ -5,6 +5,7 @@
         <v-col
           align-self="end"
           cols="12"
+          sm="12"
           md="8"
           class="d-flex flex-column ga-8 text-left description"
         >
@@ -14,11 +15,9 @@
             {{ PERSONAL_INTRODUCTION }}
           </p>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="8" sm="6" md="4">
           <img
-            class="rounded-lg"
-            width="324"
-            height="414"
+            class="rounded-lg w-100 h-100 avatar"
             :src="PERSONAL_AVATAR_IMAGE_URL"
             alt="avatar"
           />
@@ -195,6 +194,9 @@ model.',
       h1 {
         font-size: 2.2em;
       }
+    }
+    .avatar {
+      object-fit: cover;
     }
   }
 }

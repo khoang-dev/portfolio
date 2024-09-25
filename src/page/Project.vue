@@ -19,7 +19,7 @@ import ProjectCard, { type ProjectCardProps } from '@/components/ProjectCard.vue
 
 const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
   {
-    imageUrl: '/public/assets/image/project/test1.webp',
+    imageUrl: '/assets/image/project/test1.webp',
     name: 'Christmas card',
     description: 'Experimental web app with homemade recursive string interpolation',
     startTime: '2024',
@@ -33,7 +33,7 @@ const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
     githubUrl: 'https://github.com/khoang-dev/card'
   },
   {
-    imageUrl: '/public/assets/image/project/test1.webp',
+    imageUrl: '/assets/image/project/test1.webp',
     name: 'Christmas card',
     description: 'Experimental web app with homemade recursive string interpolation',
     startTime: '2023',
