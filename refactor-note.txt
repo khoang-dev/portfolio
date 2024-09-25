@@ -4,3 +4,7 @@
 - Design CSS -> Tinh chinh để  color các thành phần đồng điệu vs nhau dùng 1 color cho nhiều vị trí.
 - Mobile responsive done
 - Research PostCSS.
+- Handle Chế độ sáng/tối nếu có thời gian (Theme) : https://vuetifyjs.com/en/features/theme/#javascript
+-> Nếu có time thì cải thiện performance cho about (size sm), project, contact page, lưu ý 'vuetify/styles' css file đang import ở main.ts thay vì index.html 
+nên đôi khi gây ra vấn để  phải vẽ lại sau khi css tải xong cho màn hình cỡ trung (sm size) for about page
+<!-- <link href="/node_modules/vuetify/dist/vuetify.min.css" rel="stylesheet" /> --> Nếu muốn dùng để import vuetify css vào index.html
