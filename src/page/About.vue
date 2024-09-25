@@ -25,7 +25,7 @@
       </v-row>
     </header>
     <v-divider opacity="1"></v-divider>
-    <section class="d-flex flex-column align-center mt-8 ga-16 pb-12 skills">
+    <section class="d-flex flex-column align-center mt-8 ga-16 pb-12">
       <h2>SKILLS</h2>
       <SkillCard v-for="skills in SKILLS_LIST" v-bind="skills" :key="skills.title"></SkillCard>
     </section>

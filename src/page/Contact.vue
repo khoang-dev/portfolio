@@ -13,13 +13,25 @@
         {{ PERSONAL_INTRODUCTION }}
       </p>
       <section class="d-flex ga-3">
-        <a href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/khoang-vo-dang-2403621b3/"
+          target="_blank"
+          :aria-label="LINK_LABELs.connectLinkedin"
+        >
           <v-icon size="x-large" color="black"> mdi-linkedin </v-icon>
-          <v-tooltip activator="parent">Connect on Linkedin</v-tooltip>
+          <v-tooltip :aria-label="TOOLTIP_LABELS.link" activator="parent">{{
+            LINK_LABELs.connectLinkedin
+          }}</v-tooltip>
         </a>
-        <a href="https://github.com/khoang-dev" target="_blank">
+        <a
+          href="https://github.com/khoang-dev"
+          target="_blank"
+          :aria-label="LINK_LABELs.checkOutGithubProfile"
+        >
           <v-icon size="x-large" color="black"> mdi-github </v-icon>
-          <v-tooltip activator="parent">Check out my Github profile</v-tooltip>
+          <v-tooltip :aria-label="TOOLTIP_LABELS.link" activator="parent">{{
+            LINK_LABELs.checkOutGithubProfile
+          }}</v-tooltip>
         </a>
       </section>
     </header>
@@ -52,8 +64,18 @@
 import { toast } from 'vue3-toastify'
 import { useField, useForm } from 'vee-validate'
 
-import { PERSONAL_AVATAR_ICON_URL, PERSONAL_INTRODUCTION, PERSONAL_SLOGAN } from '@/constant'
+import {
+  PERSONAL_AVATAR_ICON_URL,
+  PERSONAL_INTRODUCTION,
+  PERSONAL_SLOGAN,
+  TOOLTIP_LABELS
+} from '@/constant'
 import sendEmail from '@/assets/smtp/smtp.js'
+
+const LINK_LABELs = {
+  connectLinkedin: 'Connect on Linkedin',
+  checkOutGithubProfile: 'Check out my Github profile'
+}
 
 const { handleSubmit } = useForm({
   validationSchema: {
