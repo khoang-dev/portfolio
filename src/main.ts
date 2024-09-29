@@ -1,6 +1,6 @@
-import '@/assets/normalize.css'
-import 'vue3-toastify/dist/index.css'
+import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
+import 'vue3-toastify/dist/index.css'
 
 import { createApp } from 'vue'
 // import { createPinia } from 'pinia'
@@ -10,7 +10,6 @@ import router from './router'
 
 // Vuetify
 import { createVuetify } from 'vuetify'
-import 'vuetify/styles'
 
 const vuetify = createVuetify()
 
