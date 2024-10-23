@@ -43,7 +43,7 @@ const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
       'Building on Vue, Vuetify, SCSS',
       'Achieve good scores for performance and SEO'
     ],
-    websiteUrl: router.path,
+    websiteUrl: window.location.origin,
     githubUrl: 'https://github.com/khoang-dev/portfolio'
   }
   // {
