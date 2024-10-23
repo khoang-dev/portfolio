@@ -47,6 +47,7 @@
       <v-divider />
       <nav class="pa-4 d-flex ga-3 action">
         <a
+          v-if="props.websiteUrl"
           class="pa-3 rounded-circle bg-white action-item"
           :href="props.websiteUrl"
           target="_blank"
@@ -57,6 +58,7 @@
           }}</v-tooltip></a
         >
         <a
+          v-if="props.githubUrl"
           class="pa-3 rounded-circle bg-white action-item"
           :href="props.githubUrl"
           target="_blank"
@@ -85,8 +87,8 @@ export interface ProjectCardProps {
   description: string
   startTime: string
   accomplishments: string[]
-  websiteUrl: string
-  githubUrl: string
+  websiteUrl?: string
+  githubUrl?: string
 }
 const props = defineProps<ProjectCardProps>()
 
