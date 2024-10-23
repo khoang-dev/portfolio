@@ -21,6 +21,18 @@ import { useRoute } from 'vue-router'
 const router = useRoute()
 const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
   {
+    imageUrl: '/assets/image/project/work-management.png',
+    name: 'Work management',
+    description: 'A website helps users focus and manage their work',
+    startTime: '2024',
+    accomplishments: [
+      'Use HTML, CSS, TypeScript',
+      'Building on Vue, Quasar, SCSS and Vue ecosystem'
+    ],
+    websiteUrl: router.path,
+    githubUrl: 'https://github.com/khoang-dev/work-management'
+  },
+  {
     imageUrl: '/assets/image/project/portfolio.png',
     name: 'Portfolio',
     description:
@@ -33,16 +45,15 @@ const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
     ],
     websiteUrl: router.path,
     githubUrl: 'https://github.com/khoang-dev/portfolio'
-  },
-  {
-    imageUrl: '/assets/image/project/christmas-card.png',
-    name: 'Christmas card',
-    description:
-      'An online gift for friends at a Christmas event includes music, a card, and fireworks',
-    startTime: '2023',
-    accomplishments: ['Use HTML, CSS, JavaScript', 'Building on Vue and Particles js'],
-    websiteUrl: 'https://kvd-christmas-card.netlify.app/',
-    githubUrl: 'https://github.com/khoang-dev/card'
   }
+  // {
+  //   imageUrl: '/assets/image/project/christmas-card.png',
+  //   name: 'Christmas card',
+  //   description:
+  //     'An online gift for friends at a Christmas event includes music, a card, and fireworks',
+  //   startTime: '2023',
+  //   accomplishments: ['Use HTML, CSS, JavaScript', 'Building on Vue and Particles js'],
+  //   websiteUrl: 'https://kvd-christmas-card.netlify.app/'
+  // }
 ])
 </script>
