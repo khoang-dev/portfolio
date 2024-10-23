@@ -29,7 +29,7 @@ const PROJECT_LIST: readonly ProjectCardProps[] = Object.freeze([
       'Use HTML, CSS, TypeScript',
       'Building on Vue, Quasar, SCSS and Vue ecosystem'
     ],
-    websiteUrl: router.path,
+    // websiteUrl: router.path,
     githubUrl: 'https://github.com/khoang-dev/work-management'
   },
   {
